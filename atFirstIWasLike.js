@@ -28,7 +28,7 @@ export default firebase;
 // ================== 👴🏽
 // 2. Creating a reference to your realtime database
 
-import firebase from 'firebase';
+import firebase from './firebase';
 
 
 const dbRef = firebase.database().ref();
@@ -78,6 +78,7 @@ dbRef.on('value', (snapshot) => {
 
   // 4c. ADD NEW DATA inside an EXISTING NODE with *update*
       // Takes an object as an argument, and will assign that object's properties to the specified node. New properties are added to any that are already there, but note that any existing properties with the same names will be overwritten.
+      // Only argument is the object of new properties.
 
   const newUserInfo = {
     favFood: 'salad',
